@@ -17,7 +17,7 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: "https://ping-me-rho.vercel.app",
+    origin: ["https://ping-me-rho.vercel.app", "https://ping-me-h020.onrender.com/api"],
     credentials: true,
   })
 );
