@@ -17,7 +17,7 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: "https://ping-me-rho.vercel.app",
     credentials: true,
   })
 );
