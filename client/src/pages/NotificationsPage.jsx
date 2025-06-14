@@ -73,9 +73,6 @@ const NotificationsPage = () => {
                                 <span className="badge badge-secondary badge-sm">
                                   Native: {request.sender.nativeLanguage}
                                 </span>
-                                <span className="badge badge-outline badge-sm">
-                                  Learning: {request.sender.learningLanguage}
-                                </span>
                               </div>
                             </div>
                           </div>
@@ -121,8 +118,7 @@ const NotificationsPage = () => {
                               {notification.recipient.fullName}
                             </h3>
                             <p className="text-sm my-1">
-                              {notification.recipient.fullName} accepted your
-                              friend request
+                              {notification.recipient.fullName} accepted your friend request
                             </p>
                             <p className="text-xs flex items-center opacity-70">
                               <ClockIcon className="h-3 w-3 mr-1" />

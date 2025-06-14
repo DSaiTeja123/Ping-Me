@@ -18,10 +18,10 @@ const __dirname = path.resolve();
 app.use(
   cors({
     origin: [
-      "https://ping-me-rho.vercel.app",
-      "https://ping-me-h020.onrender.com",
-      // "http://localhost:8000",
-      // "http://localhost:5173",
+      // "https://ping-me-rho.vercel.app",
+      // "https://ping-me-h020.onrender.com",
+      "http://localhost:8000",
+      "http://localhost:5173",
     ],
     credentials: true,
   })

@@ -46,12 +46,14 @@ const HomePage = () => {
 
   useEffect(() => {
     const outgoingIds = new Set();
-    if (outgoingFriendReqs && outgoingFriendReqs.length > 0) {
+    if (Array.isArray(outgoingFriendReqs)) {
       outgoingFriendReqs.forEach((req) => {
-        outgoingIds.add(req.recipient._id);
+        if (req?.recipient?._id) {
+          outgoingIds.add(req.recipient._id);
+        }
       });
-      setOutgoingRequestsIds(outgoingIds);
     }
+    setOutgoingRequestsIds(outgoingIds);
   }, [outgoingFriendReqs]);
 
   return (
@@ -86,11 +88,11 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                  Meet New Learners
+                  Meet New Friends
                 </h2>
                 <p className="opacity-70">
-                  Discover perfect language exchange partners based on your
-                  profile
+                  Discover like-minded friends and start meaningful
+                  conversations based on your profile.
                 </p>
               </div>
             </div>
@@ -142,10 +144,6 @@ const HomePage = () => {
                         <span className="badge badge-secondary">
                           {getLanguageFlag(user.nativeLanguage)}
                           Native: {capitalize(user.nativeLanguage)}
-                        </span>
-                        <span className="badge badge-outline">
-                          {getLanguageFlag(user.learningLanguage)}
-                          Learning: {capitalize(user.learningLanguage)}
                         </span>
                       </div>
 

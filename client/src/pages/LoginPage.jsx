@@ -44,7 +44,7 @@ const LoginPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold">Welcome Back</h2>
                   <p className="text-sm opacity-70">
-                    Sign in to your account to continue your language journey
+                    Jump back in, your chat squad is waiting!
                   </p>
                 </div>
 
@@ -126,11 +126,10 @@ const LoginPage = () => {
 
             <div className="text-center space-y-3 mt-6">
               <h2 className="text-xl font-semibold">
-                Connect with language partners worldwide
+                Meet and connect with new people around the world.
               </h2>
               <p className="opacity-70">
-                Practice conversations, make friends, and improve your language
-                skills together
+                Spark conversations, make new friends, and enjoy the art of chat.
               </p>
             </div>
           </div>
